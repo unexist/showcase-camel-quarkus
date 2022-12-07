@@ -1,0 +1,7 @@
+= Showcase for Hadoop based on Camel and Quarkus
+
+This project holds a showcase Hadoop with Camel and Quarkus.
+
+=== Links
+
+- https://medium.com/analytics-vidhya/hadoop-single-node-cluster-on-docker-e88c3d09a256
