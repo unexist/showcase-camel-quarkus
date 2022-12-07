@@ -4,4 +4,6 @@ This project holds a showcase Hadoop with Camel and Quarkus.
 
 === Links
 
+- https://minikube.sigs.k8s.io/docs/drivers/qemu/
 - https://medium.com/analytics-vidhya/hadoop-single-node-cluster-on-docker-e88c3d09a256
+- https://github.com/rancavil/hadoop-single-node-cluster
