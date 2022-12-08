@@ -61,7 +61,6 @@ public class TodoRoute extends RouteBuilder {
             .bean(todoService, "delete(${header.id})")
             .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(204));
 
-
         from("direct:getAll")
             .bean(todoService, "getAll()");
     }
