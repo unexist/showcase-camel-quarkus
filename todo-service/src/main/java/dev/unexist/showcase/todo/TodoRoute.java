@@ -1,5 +1,5 @@
 /**
- * @package Showcase-Hadoop-Camel-Quarkus
+ * @package Showcase-Camel-Quarkus
  *
  * @file Todo route
  * @copyright 2022 Christoph Kappel <christoph@unexist.dev>
