@@ -1,4 +1,4 @@
-= Showcase for Hadoop based on Camel and Quarkus
+= Showcase for Camel and Quarkus
 
 This project holds a showcase Hadoop with Camel and Quarkus.
 
