@@ -13,7 +13,7 @@ package dev.unexist.showcase.todo;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 
