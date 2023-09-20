@@ -1,9 +1,7 @@
-= Showcase for Camel and Quarkus
+= Showcase for Camel based on Quarkus
 
-This project holds a showcase Hadoop with Camel and Quarkus.
+This project holds a showcase for Camel related things.
 
-=== Links
+== Links
 
-- https://minikube.sigs.k8s.io/docs/drivers/qemu/
-- https://medium.com/analytics-vidhya/hadoop-single-node-cluster-on-docker-e88c3d09a256
-- https://github.com/rancavil/hadoop-single-node-cluster
+- https://camel.apache.org/camel-quarkus/3.2.x

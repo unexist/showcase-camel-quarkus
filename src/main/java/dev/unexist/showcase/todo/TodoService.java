@@ -13,11 +13,13 @@ package dev.unexist.showcase.todo;
 
 import io.quarkus.runtime.annotations.RegisterForReflection;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 
 @RegisterForReflection
+@ApplicationScoped
 public class TodoService {
 
     @Inject

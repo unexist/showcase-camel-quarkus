@@ -8,12 +8,13 @@
  * This program can be distributed under the terms of the Apache License v2.0.
  * See the file LICENSE for details.
  **/
- 
+
 package dev.unexist.showcase.todo;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.model.rest.RestBindingMode;
+import org.apache.olingo.commons.api.http.HttpStatusCode;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
@@ -51,15 +52,18 @@ public class TodoRoute extends RouteBuilder {
         /* From mapping */
         from("direct:createTodo")
             .bean(todoService, "create(${body})")
-            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(201));
+            .setHeader(Exchange.HTTP_RESPONSE_CODE,
+                    constant(HttpStatusCode.CREATED.getStatusCode()));
 
         from("direct:update")
             .bean(todoService, "update(${header.id},${body})")
-            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(204));
+            .setHeader(Exchange.HTTP_RESPONSE_CODE,
+                    constant(HttpStatusCode.NO_CONTENT.getStatusCode()));
 
         from("direct:delete")
             .bean(todoService, "delete(${header.id})")
-            .setHeader(Exchange.HTTP_RESPONSE_CODE, constant(204));
+            .setHeader(Exchange.HTTP_RESPONSE_CODE,
+                    constant(HttpStatusCode.NO_CONTENT.getStatusCode()));
 
         from("direct:getAll")
             .bean(todoService, "getAll()");

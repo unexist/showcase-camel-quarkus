@@ -15,14 +15,16 @@ import io.quarkus.runtime.annotations.RegisterForReflection;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
 @RegisterForReflection
+@ApplicationScoped
 public class TodoRepository {
-    private final Logger LOGGER = LoggerFactory.getLogger(TodoRoute.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(TodoRepository.class);
 
     private final List<Todo> list;
 
@@ -30,7 +32,7 @@ public class TodoRepository {
      * Constructor
      **/
 
-    TodoRepository() {
+    public TodoRepository() {
         this.list = new ArrayList<>();
     }
 
